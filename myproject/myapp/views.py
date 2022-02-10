@@ -3,9 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    context = {
-        'name': 'Django',
-        'age': '18',
-        'nationality': 'indian'
-    }
-    return render(request, 'index.html', context)
+    return render(request, 'index.html')
+
+def counter(request):
+    text = request.GET['text']
+    word_count = len(text.split())
+    return render(request, 'counter.html', {'word_count': word_count})

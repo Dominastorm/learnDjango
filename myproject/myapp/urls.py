@@ -4,4 +4,5 @@ from . import views
 # empty string is the root of the app
 urlpatterns = [
     path('', views.index, name='index'),
+    path('counter', views.counter, name='counter'),
 ]
