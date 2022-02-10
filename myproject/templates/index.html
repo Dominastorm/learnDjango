@@ -1,7 +1,4 @@
-<h1>Input your text below:</h1>
-<!-- Method is GET by default (Appears in URL) -->
-<form method="POST" action="counter">
-    {% csrf_token %}
-    <textarea name="text" rows="25" cols="100"></textarea><br><br>
-    <input type="submit"/>
-</form>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Hey, welcome to my project</h1>
